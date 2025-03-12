@@ -30,3 +30,12 @@ function actualizarLista() {
         lista.appendChild(li);
     });
 }
+
+function sortearAmigo() {
+    if (amigos.length === 0) {
+        alert("Agrega nombres antes de sortear");
+        return;
+    }
+    let indice = Math.floor(Math.random() * amigos.length);
+    document.getElementById("resultado").textContent = "El amigo secreto es: " + amigos[indice];
+}
